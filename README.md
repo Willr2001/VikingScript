@@ -4,4 +4,6 @@
 
 # Introduction to VikingScript
 
-rfkf
+All programming languages shall be conquered!
+
+Welcome to the ambitious world of VikingScript. It entails
