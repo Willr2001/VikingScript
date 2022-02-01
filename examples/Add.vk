@@ -1,0 +1,8 @@
+runes(add(x, y))
+
+kalla x = 5
+kalla y = 17
+
+valhalla add(x, y) { 
+ hverfa x + y 
+} 
