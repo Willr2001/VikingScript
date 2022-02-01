@@ -44,8 +44,24 @@ Below is the example code which you can see has a big viking influence!
 
 - Vallaha is the warrior heaven for the Vikings
 - no type needed for decleration
-- 
+- hverfa means to return in Norse
 
 | JavaScript | VikingScript |
 | ---------- | ------------ |
-| ```javascript function add(x,y) let x = 5``` | ```valhalla add(x,y) { ``` |
+|<pre>function add(x,y) { <br> return x + y <br>} </pre> | <pre>valhalla add(x, y) { <br> hverfa x + y <br>} </pre> |
+
+### Comments
+
+- The comment is based off a Viking helmet
+
+| JavaScript | VikingScript |
+| ---------- | ------------ |
+| ``` //Bjorn ``` | ```  }:\| Odin  ``` |
+| <pre> /* <br>   Erik <br> */ </pre> | <pre> }:\|* <br>   Gorm <br> }:\|* </pre> |
+
+### Conditionals
+
+| JavaScript | VikingScript |
+| ---------- | ------------ |
+| <pre> let x = 5 <br> if(x == 5) { <br>  console.log(x) <br> } else if (x > 10) { <br>   console.log(x) <br> } else if(x > 10) { <br> } console.log("greater") <br> else { <br>  console.log("") | ``` kalla x = 5 ``` |
+
