@@ -6,7 +6,7 @@
 
 All programming languages shall be conquered!
 
-Welcome to the ambitious world of VikingScript. VikingScript is a Viking themed language which keeps the essence of many other high-level programming languages such as Python and JavaScript.
+Welcome to the ambitious world of VikingScript. VikingScript is a Viking themed language which keeps the essence of many other high-level programming languages like JavaScript. Years of delicate syntax has turned us into barbaric hammer-swinging Vikings!
 
 by Will Ruskin, Zander Zemilak and Dylan McGoldrick 
 
@@ -16,7 +16,7 @@ VikingScript has a number of features:
 
 -  Strongly typed
 -  Statically typed
--  ```.vk``` file extension
+-  ```.VK``` file extension
 
 # Example Code
 
@@ -80,7 +80,7 @@ x lessThan y
 
 | JavaScript | VikingScript |
 | ---------- | ------------ |
-| <pre> let x = 5 <br> if(x == 5) { <br>  console.log(x)  <br> }<br> else if (x > 10) { <br>   console.log("greater") <br> }<br> else (x < 10) { <br>   console.log("less") <br> }<br> </pre> | <pre> kalla x = 5 <br> ef(x equal 5) { <br>  runes(x)  <br> }<br> kostr ef (x isGreaterThan 10) { <br>   runes("greater") <br> }<br> kostr (x isLessThan 10) { <br>   runes("less") <br> }<br> </pre> |
+| <pre> let x = 5 <br> if(x == 5) { <br>   console.log(x)  <br> }<br> else if (x > 10) { <br>   console.log("greater") <br> }<br> else (x < 10) { <br>   console.log("less") <br> }<br> </pre> | <pre> kalla x = 5 <br> ef(x equal 5) { <br>   runes(x)  <br> }<br> kostr ef (x isGreaterThan 10) { <br>   runes("greater") <br> }<br> kostr (x isLessThan 10) { <br>   runes("less") <br> }<br> </pre> |
 
 ### True / False
 
