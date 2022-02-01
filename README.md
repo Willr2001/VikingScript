@@ -6,7 +6,7 @@
 
 All programming languages shall be conquered!
 
-Welcome to the ambitious world of VikingScript. VikingScript is a Viking themed language which keeps the essence of many other high-level programming languages such as Python.
+Welcome to the ambitious world of VikingScript. VikingScript is a Viking themed language which keeps the essence of many other high-level programming languages such as Python and JavaScript.
 
 by Will Ruskin, Zander Zemilak and Dylan McGoldrick 
 
