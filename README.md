@@ -6,7 +6,9 @@
 
 All programming languages shall be conquered!
 
-Welcome to the ambitious world of VikingScript. It entails
+Welcome to the ambitious world of VikingScript. VikingScript is a ...
+
+by Will Ruskin, Zander Zemilak and Dylan McGoldrick 
 
 # Features
 
