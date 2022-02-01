@@ -7,3 +7,8 @@
 All programming languages shall be conquered!
 
 Welcome to the ambitious world of VikingScript. It entails
+
+# Features
+
+
+# Example Code
