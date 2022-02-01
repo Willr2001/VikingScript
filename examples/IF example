@@ -1,0 +1,10 @@
+ kalla x = 5 
+ ef(x equal 5) { 
+  runes(x)  
+ }
+ kostr ef (x isGreaterThan 10) { 
+   runes("greater") 
+ }
+ kostr (x isLessThan 10) { 
+   runes("less") 
+ }
