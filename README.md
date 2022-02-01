@@ -33,7 +33,7 @@ Below is the example code which you can see has a big viking influence!
 
 ### Variable declaration:
 
-- Kalla means declare in Norse
+- ```kalla``` means declare in Norse
 - No semi-colons
 - No need to specify the type of the variable
 
