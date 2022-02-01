@@ -15,7 +15,7 @@ by Will Ruskin, Zander Zemilak and Dylan McGoldrick
 VikingScript has a number of features:
 
 -  Strongly typed
--  Statically typed
+-  Dynamically typed
 -  ```.VK``` file extension
 
 # Example Code
