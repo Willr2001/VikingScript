@@ -14,9 +14,8 @@ by Will Ruskin, Zander Zemilak and Dylan McGoldrick
 
 VikingScript has a number of features:
 
-- type?
 -  Strongly typed
--  a
+-  Statically typed
 
 # Example Code
 
@@ -25,7 +24,7 @@ Below is the example code which you can see has a big viking influence!
 ### Print to the console:
 
 - Classic hello, world program
-- 
+- runes is the letters of an ancient Latin alphabet which the Vikings used
 
 | JavaScript | VikingScript |
 | ---------- | ------------ |
@@ -33,11 +32,20 @@ Below is the example code which you can see has a big viking influence!
 
 ### Variable declaration:
 
+- Kalla means declare in Norse
+- No semi-colons
+- No need to specify the type of the variable
+
 | JavaScript | VikingScript |
 | ---------- | ------------ |
 | ``` let x = 5 ``` | ``` kalla x = 5 ``` |
 
 ### Function declaration 
+
+- Vallaha is the warrior heaven for the Vikings
+- no type needed for decleration
+- 
+
 | JavaScript | VikingScript |
 | ---------- | ------------ |
-| ```javascript function add(x,y) let x = 5``` | ``` runes("hello, world") ``` |
+| ```javascript function add(x,y) let x = 5``` | ```valhalla add(x,y) { ``` |
