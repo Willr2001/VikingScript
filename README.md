@@ -59,6 +59,19 @@ Below is the example code which you can see has a big viking influence!
 | ``` //Bjorn ``` | ```  }:\| Odin  ``` |
 | <pre> /* <br>   Erik <br> */ </pre> | <pre> }:\|* <br>   Gorm <br> }:\|* </pre> |
 
+### Relational Operators
+
+- A pretty simple way to write relational operators, that hopefully even Vikings could understand it.
+
+```
+x equal y
+x lessThanOrEqual 10
+x greaterThanOrEqual 10
+x doesNotEqual 10
+x greaterThan 10
+x lessThan 10
+```
+
 ### Conditionals
 
 - ```ef``` translates to ```if``` in Norse 
