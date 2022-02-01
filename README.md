@@ -15,7 +15,29 @@ by Will Ruskin, Zander Zemilak and Dylan McGoldrick
 VikingScript has a number of features:
 
 - type?
--  idk
+-  Strongly typed
 -  a
 
 # Example Code
+
+Below is the example code which you can see has a big viking influence!
+
+### Print to the console:
+
+- Classic hello, world program
+- 
+
+| JavaScript | VikingScript |
+| ---------- | ------------ |
+| ``` console.log("hello, world") ``` | ``` runes("hello, world") ``` |
+
+### Variable declaration:
+
+| JavaScript | VikingScript |
+| ---------- | ------------ |
+| ``` let x = 5 ``` | ``` kalla x = 5 ``` |
+
+### Function declaration 
+| JavaScript | VikingScript |
+| ---------- | ------------ |
+| ```javascript function add(x,y) let x = 5``` | ``` runes("hello, world") ``` |
