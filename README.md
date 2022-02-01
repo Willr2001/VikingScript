@@ -11,6 +11,7 @@ Welcome to the ambitious world of VikingScript. VikingScript is a Viking themed 
 by Will Ruskin, Zander Zemilak and Dylan McGoldrick 
 
 # Features
+
 VikingScript has a number of features:
 -
 -
