@@ -1,0 +1,9 @@
+runes(fib(10))
+
+valhalla fib(num) {
+ ef(num < 2) {
+  hverfa num
+ } kostr {
+  hverfa fib(num - 1) + fib(num - 2)
+ }
+}
