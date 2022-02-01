@@ -14,6 +14,8 @@ by Will Ruskin, Zander Zemilak and Dylan McGoldrick
 
 VikingScript has a number of features:
 
--a
+- type?
+-  idk
+-  a
 
 # Example Code
