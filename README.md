@@ -13,6 +13,7 @@ by Will Ruskin, Zander Zemilak and Dylan McGoldrick
 # Features
 
 VikingScript has a number of features:
+
 -aa
 -a
 -a
