@@ -25,7 +25,7 @@ Below is the example code which you can see has a big viking influence!
 ### Print to the console:
 
 - Classic hello, world program
-- runes is the letters of an ancient Latin alphabet which the Vikings used
+- ```runes``` are the letters of an ancient Latin alphabet which the Vikings used
 
 | JavaScript | VikingScript |
 | ---------- | ------------ |
@@ -41,15 +41,19 @@ Below is the example code which you can see has a big viking influence!
 | ---------- | ------------ |
 | ``` let x = 5 ``` | ``` kalla x = 5 ``` |
 
+### Return
+
+```hverfa``` identifier used, meaning "to return" in Norse
+
 ### Function declaration 
 
-- Vallaha is the warrior heaven for the Vikings
-- no type needed for decleration
-- hverfa means to return in Norse
+- ```valhalla``` being the majestic heaven in Asgard where all Vikings strive to be 
+- No return type needed
 
 | JavaScript | VikingScript |
 | ---------- | ------------ |
 |<pre>function add(x,y) { <br> return x + y <br>} </pre> | <pre>valhalla add(x, y) { <br> hverfa x + y <br>} </pre> |
+
 
 ### Comments
 
@@ -62,7 +66,7 @@ Below is the example code which you can see has a big viking influence!
 
 ### Relational Operators
 
-- A pretty simple way to write relational operators, that hopefully even Vikings could understand it.
+- A barbaric syntax that even Vikings can understand
 
 ```
 x equal y
