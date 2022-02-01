@@ -65,11 +65,11 @@ Below is the example code which you can see has a big viking influence!
 
 ```
 x equal y
-x lessThanOrEqual 10
-x greaterThanOrEqual 10
-x doesNotEqual 10
-x greaterThan 10
-x lessThan 10
+x lessThanOrEqual y
+x greaterThanOrEqual y
+x doesNotEqual y
+x greaterThan y
+x lessThan y
 ```
 
 ### Conditionals
