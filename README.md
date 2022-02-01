@@ -16,6 +16,7 @@ VikingScript has a number of features:
 
 -  Strongly typed
 -  Statically typed
+-  ```.vk``` file extension
 
 # Example Code
 
@@ -87,6 +88,6 @@ x lessThan y
 
 | JavaScript | VikingScript | 
 | ---------- | ------------ |
-|<pre> true <br> false <br> </pre> | <pre> thor <br> loki <br> </pre> | 
+|<pre> true <br> false </pre> | <pre> thor <br> loki  </pre> | 
 
 ###
