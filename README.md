@@ -14,8 +14,6 @@ by Will Ruskin, Zander Zemilak and Dylan McGoldrick
 
 VikingScript has a number of features:
 
--aa
--a
 -a
 
 # Example Code
