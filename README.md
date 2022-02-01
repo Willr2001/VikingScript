@@ -61,7 +61,19 @@ Below is the example code which you can see has a big viking influence!
 
 ### Conditionals
 
+- ```ef``` translates to ```if``` in Norse 
+- ```kostr``` the Norse word for "Otherwise" replaces ```else```
+
 | JavaScript | VikingScript |
 | ---------- | ------------ |
-| <pre> let x = 5 <br> if(x == 5) { <br>  console.log(x) <br> } else if (x > 10) { <br>   console.log(x) <br> } else if(x > 10) { <br> } console.log("greater") <br> else { <br>  console.log("") | ``` kalla x = 5 ``` |
+| <pre> let x = 5 <br> if(x == 5) { <br>  console.log(x)  <br> }<br> else if (x > 10) { <br>   console.log("greater") <br> }<br> else (x < 10) { <br>   console.log("less") <br> }<br> </pre> | <pre> kalla x = 5 <br> ef(x equal 5) { <br>  runes(x)  <br> }<br> kostr ef (x isGreaterThan 10) { <br>   runes("greater") <br> }<br> kostr (x isLessThan 10) { <br>   runes("less") <br> }<br> </pre> |
 
+### True / False
+
+- Replaced ```true``` and ```false``` values to please the Gods
+
+| JavaScript | VikingScript | 
+| ---------- | ------------ |
+|<pre> true <br> false <br> </pre> | <pre> thor <br> loki <br> </pre> | 
+
+###
