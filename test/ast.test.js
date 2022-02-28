@@ -15,7 +15,8 @@ const expected1 = `   1 | Program statements=[#2,#4]
     3 | Assignment target=(Id,"x") source=(Num,"5")
     4 | VariableDeclaration variable=(Id,"y") initializer=#5
     5 | Assignment target=(Id,"y") source=(Num,"10")
-    6 | Conditional test=(Id,"x") consequent=#10 alternate=(Id, "y")`
+    6 | ReturnStatement expression=[#7]
+    7 | Conditional test=(Id,"x") alternate=(Id, "y")`
 
 const source2 = `valhalla add(x, y) { hverfa x + y } `
 
