@@ -60,7 +60,7 @@ Below is the example code which you can see has a big viking influence!
 
 | JavaScript                        | VikingScript                          |
 | --------------------------------- | ------------------------------------- |
-| `//Bjorn`                         | ` }:\| Odin `                         |
+| `//Bjorn`                         | `}:\| Odin`                           |
 | <pre> /_ <br> Erik <br> _/ </pre> | <pre> {:\| <br> Gorm <br> }:\| </pre> |
 
 ### Relational Operators
