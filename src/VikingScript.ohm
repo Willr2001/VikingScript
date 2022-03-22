@@ -26,6 +26,15 @@ VikingScript {
             | Call
             | id
             | "(" Exp ")"                             -- parens
+            | stringlit
+
+  stringlit   = "\"" char* "\""
+  char        = ~control ~"\\" ~"\"" any
+              | "\\" ("n" | "t" | "\"" | "\\")                --escape
+              | "\\u{" hex hex? hex? hex? hex? hex? "}"       --codepoint
+  
+  control     = "\x00".."\x1f" | "\x80".."\x9f"
+  hex         = hexDigit
 
   Call      = id "(" Args ")"
   Params    = ListOf<id, ",">
@@ -36,7 +45,7 @@ VikingScript {
   true      = "thor" ~idchar
   false     = "loki" ~idchar
   print     = "runes" ~idchar
-  keyword   = let | function | while | true | false
+  keyword   = let | function | print | true | false
   num       = digit+ ("." digit+)? 
   id        = ~keyword letter idchar*
   idchar    = letter | digit | "_"

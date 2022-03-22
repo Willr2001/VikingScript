@@ -8,30 +8,34 @@ const astBuilder = vkGrammar.createSemantics().addOperation("ast", {
   Program(body) {
     return new core.Program(body.ast())
   },
-  Statement_vardec(_let, id, _eq, initializer, _semicolon) {
+  Statement_vardec(_let, id, _eq, initializer) {
     return new core.VariableDeclaration(id.ast(), initializer.ast())
   },
-  Statement_fundec(_fun, id, _open, params, _close, _equals, body, _semicolon) {
-    return new core.FunctionDeclaration(id.ast(), params.asIteration().ast(), body.ast())
+  Statement_fundec(_fun, id, _open, params, _close, _equals, body) {
+    return new core.FunctionDeclaration(
+      id.ast(),
+      params.asIteration().ast(),
+      body.ast()
+    )
   },
-  Statement_assign(id, _eq, expression, _semicolon) {
+  Statement_assign(id, _eq, expression) {
     return new core.Assignment(id.ast(), expression.ast())
   },
-  Statement_print(_print, argument, _semicolon) {
+  Statement_print(_print, argument) {
     return new core.PrintStatement(argument.ast())
   },
-  Statement_while(_while, test, body) {
-    return new core.WhileStatement(test.ast(), body.ast())
-  },
+  // Statement_while(_while, test, body) {
+  //   return new core.WhileStatement(test.ast(), body.ast())
+  // },
   Block(_open, body, _close) {
     return body.ast()
   },
   Exp_unary(op, operand) {
     return new core.UnaryExpression(op.ast(), operand.ast())
   },
-  Exp_ternary(test, _questionMark, consequent, _colon, alternate) {
-    return new core.Conditional(test.ast(), consequent.ast(), alternate.ast())
-  },
+  // Exp_ternary(test, _questionMark, consequent, _colon, alternate) {
+  //   return new core.Conditional(test.ast(), consequent.ast(), alternate.ast())
+  // },
   Exp1_binary(left, op, right) {
     return new core.BinaryExpression(op.ast(), left.ast(), right.ast())
   },
@@ -65,14 +69,17 @@ const astBuilder = vkGrammar.createSemantics().addOperation("ast", {
   false(_) {
     return new core.Token("Bool", this.source)
   },
-  num(_whole, _point, _fraction, _e, _sign, _exponent) {
+  num(_whole, _point, _fraction) {
     return new core.Token("Num", this.source)
+  },
+  stringlit(_openQuote, _chars, _closeQuote) {
+    return new core.Token("Str", this.source)
   },
   _terminal() {
     return new core.Token("Sym", this.source)
   },
   _iter(...children) {
-    return children.map(child => child.ast())
+    return children.map((child) => child.ast())
   },
 })
 
