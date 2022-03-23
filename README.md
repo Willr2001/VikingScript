@@ -83,7 +83,7 @@ x lessThan y
 
 | JavaScript                                                                                                                                                                            | VikingScript                                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <pre> let x = 5 <br> if(x == 5) { <br> console.log(x) <br> }<br> else if (x > 10) { <br> console.log("greater") <br> }<br> else (x < 10) { <br> console.log("less") <br> }<br> </pre> | <pre> kalla x = 5 <br> ef(x equal 5) { <br> runes(x) <br> }<br> kostr ef (x isGreaterThan 10) { <br> runes("greater") <br> }<br> kostr (x isLessThan 10) { <br> runes("less") <br> }<br> </pre> |
+| <pre> let x = 5 <br> if(x == 5) { <br> console.log(x) <br> }<br> else if (x > 10) { <br> console.log("greater") <br> }<br> else (x < 10) { <br> console.log("less") <br> }<br> </pre> | <pre> kalla x = 5 <br> ef(x equal 5) { <br> runes(x) <br> }<br> kostr ef (x greaterThan 10) { <br> runes("greater") <br> }<br> kostr (x lessThan 10) { <br> runes("less") <br> }<br> </pre> |
 
 ### True / False
 

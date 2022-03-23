@@ -1,5 +1,4 @@
 #! /usr/bin/env node
-// Original Code by Ray Toal, Loyola Marymount University
 import fs from "fs/promises"
 import process from "process"
 import compile from "./compiler.js"
