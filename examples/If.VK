@@ -1,0 +1,4 @@
+ kalla x = 5 
+ ef(x equal 5) { 
+  runes(x)  
+ }

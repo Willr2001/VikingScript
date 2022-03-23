@@ -24,6 +24,12 @@ const astBuilder = vkGrammar.createSemantics().addOperation("ast", {
   Statement_print(_print, argument) {
     return new core.PrintStatement(argument.ast())
   },
+  IfStmt_long(_if, test, consequent, _else, alternate) {
+    return new core.IfStatement(test.ast(), consequent.ast(), alternate.ast())
+  },
+  IfStmt_short(_if, test, consequent) {
+    return new core.ShortIfStatement(test.ast(), consequent.ast())
+  },
   // Statement_while(_while, test, body) {
   //   return new core.WhileStatement(test.ast(), body.ast())
   // },

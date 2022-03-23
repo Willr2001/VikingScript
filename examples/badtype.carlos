@@ -1,0 +1,2 @@
+const languageName = "Carlos";
+languageName = 500;

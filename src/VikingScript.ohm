@@ -4,7 +4,11 @@ VikingScript {
             | function id "(" Params ")" "=" Exp   -- fundec
             | id "=" Exp                           -- assign
             | print Exp                            -- print
+            | IfStmt
   Block     = "{" Statement* "}"
+
+  IfStmt      = if Exp Block else (Block | IfStmt) -- long
+              | if Exp Block                       -- short
 
   Exp       = ("-" | "!") Exp7                        -- unary
             | Exp1
@@ -45,6 +49,8 @@ VikingScript {
   true      = "thor" ~idchar
   false     = "loki" ~idchar
   print     = "runes" ~idchar
+  if        = "ef" ~idchar
+  else      = "kostr" ~idchar
   keyword   = let | function | print | true | false
   num       = digit+ ("." digit+)? 
   id        = ~keyword letter idchar*

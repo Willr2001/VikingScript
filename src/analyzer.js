@@ -70,6 +70,23 @@ class Context {
       error(`The identifier ${s.target.lexeme} is read only`, s.target)
     }
   }
+  IfStatement(s) {
+    this.analyze(s.test)
+    checkBoolean(s.test)
+    this.newChildContext().analyze(s.consequent)
+    if (s.alternate.constructor === Array) {
+      // It's a block of statements, make a new context
+      this.newChildContext().analyze(s.alternate)
+    } else if (s.alternate) {
+      // It's a trailing if-statement, so same context
+      this.analyze(s.alternate)
+    }
+  }
+  ShortIfStatement(s) {
+    this.analyze(s.test)
+    checkBoolean(s.test)
+    this.newChildContext().analyze(s.consequent)
+  }
   WhileStatement(s) {
     this.analyze(s.test)
     this.analyze(s.body)

@@ -27,6 +27,8 @@ const syntaxErrors = [
   ["an illegal statement on line 2", "print(5);\nx * 5;", /Line 2, col 3/],
   ["a statement starting with a )", "print(5);\n) * 5", /Line 2, col 1/],
   ["an expression starting with a *", "x = * 71;", /Line 1, col 5/],
+  ["does function declarations", "function zero(x: int) = 0;"],
+  ["illegal type", "function f(x: char) = 1;"]
 ]
 
 describe("The grammar", () => {

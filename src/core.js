@@ -31,6 +31,20 @@ export class Assignment {
   }
 }
 
+export class IfStatement {
+  // Example: if x < 3 { print(100); } else { break; }
+  constructor(test, consequent, alternate) {
+    Object.assign(this, { test, consequent, alternate })
+  }
+}
+
+export class ShortIfStatement {
+  // Example: if x < 3 { print(100); }
+  constructor(test, consequent) {
+    Object.assign(this, { test, consequent })
+  }
+}
+
 // export class WhileStatement {
 //   constructor(test, body) {
 //     Object.assign(this, { test, body })
@@ -90,6 +104,7 @@ export class Function {
     Object.assign(this, { name, paramCount, readOnly })
   }
 }
+
 
 export const standardLibrary = Object.freeze({
   π: new Variable("π", true),
