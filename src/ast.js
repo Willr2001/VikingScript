@@ -11,7 +11,7 @@ const astBuilder = vkGrammar.createSemantics().addOperation("ast", {
   Statement_vardec(_let, id, _eq, initializer) {
     return new core.VariableDeclaration(id.ast(), initializer.ast())
   },
-  Statement_fundec(_fun, id, _open, params, _close, _equals, body) {
+  Statement_fundec(_fun, id, _open, params, _close, body) {
     return new core.FunctionDeclaration(
       id.ast(),
       params.asIteration().ast(),
@@ -33,6 +33,9 @@ const astBuilder = vkGrammar.createSemantics().addOperation("ast", {
   // Statement_while(_while, test, body) {
   //   return new core.WhileStatement(test.ast(), body.ast())
   // },
+  Statement_return(_return, expression) {
+    return new core.ReturnStatement(expression.ast())
+  },
   Block(_open, body, _close) {
     return body.ast()
   },

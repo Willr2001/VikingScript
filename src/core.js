@@ -51,6 +51,12 @@ export class ShortIfStatement {
 //   }
 // }
 
+export class ReturnStatement {
+  constructor(expression) {
+    Object.assign(this, { expression })
+  }
+}
+
 export class PrintStatement {
   constructor(argument) {
     Object.assign(this, { argument })
@@ -105,7 +111,6 @@ export class Function {
   }
 }
 
-
 export const standardLibrary = Object.freeze({
   π: new Variable("π", true),
   /*sqrt: new Function("sqrt", 1, true),
@@ -150,7 +155,9 @@ Program.prototype[util.inspect.custom] = function () {
     function view(e) {
       if (tags.has(e)) return `#${tags.get(e)}`
       if (e?.constructor === Token) {
-        return `(${e.category},"${e.lexeme}"${e.value ? "," + view(e.value) : ""})`
+        return `(${e.category},"${e.lexeme}"${
+          e.value ? "," + view(e.value) : ""
+        })`
       }
       if (Array.isArray(e)) return `[${e.map(view)}]`
       return util.inspect(e)

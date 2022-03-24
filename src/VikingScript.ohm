@@ -1,10 +1,11 @@
 VikingScript {
   Program   = Statement+
   Statement = let id "=" Exp                       -- vardec
-            | function id "(" Params ")" "=" Exp   -- fundec
+            | function id "(" Params ")" Block     -- fundec
             | id "=" Exp                           -- assign
             | print Exp                            -- print
             | IfStmt
+            | return Exp                           -- return
   Block     = "{" Statement* "}"
 
   IfStmt      = if Exp Block else (Block | IfStmt) -- long
@@ -51,9 +52,10 @@ VikingScript {
   print     = "runes" ~idchar
   if        = "ef" ~idchar
   else      = "kostr" ~idchar
+  return    = "hverfa" ~idchar
   keyword   = let | function | print | true | false
   num       = digit+ ("." digit+)? 
   id        = ~keyword letter idchar*
   idchar    = letter | digit | "_"
-  space    += "//" (~"\n" any)* ("\n" | end)          -- comment
+  space    += ">---->" (~"\n" any)* ("\n" | end)          -- comment
 }
