@@ -28,11 +28,11 @@ const syntaxErrors = [
   ["a statement starting with a )", "print(5);\n) * 5", /Line 2, col 1/],
   ["an expression starting with a *", "x = * 71;", /Line 1, col 5/],
   ["does function declarations", "function zero(x: int) = 0;"],
-  ["illegal type", "function f(x: char) = 1;"]
+  ["illegal type", "function f(x: char) = 1;"],
 ]
 
 describe("The grammar", () => {
-  const grammar = ohm.grammar(fs.readFileSync("src/bella.ohm"))
+  const grammar = ohm.grammar(fs.readFileSync("src/VikingScript.ohm"))
   for (const [scenario, source] of syntaxChecks) {
     it(`properly specifies ${scenario}`, () => {
       assert(grammar.match(source).succeeded())

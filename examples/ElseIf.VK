@@ -5,6 +5,6 @@
  kostr ef (x greaterThan 10) { 
    runes("greater") 
  }
- kostr (x lessThan 10) { 
+ kostr { 
    runes("less") 
  }
