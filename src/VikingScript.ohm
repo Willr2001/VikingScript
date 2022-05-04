@@ -55,7 +55,7 @@ VikingScript {
   if        = "ef" ~idchar
   else      = "kostr" ~idchar
   return    = "hverfa" ~idchar
-  keyword   = let | function | print | true | false
+  keyword   = let | function | print | true | false | if | else | return
   num       = digit+ ("." digit+)? 
   id        = ~keyword letter idchar*
   idchar    = letter | digit | "_"
