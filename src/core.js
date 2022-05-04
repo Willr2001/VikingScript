@@ -113,8 +113,8 @@ export class Function {
 
 export const standardLibrary = Object.freeze({
   π: new Variable("π", true),
-  /*sqrt: new Function("sqrt", 1, true),
   sin: new Function("sin", 1, true),
+  /*sqrt: new Function("sqrt", 1, true),
   cos: new Function("cos", 1, true),
   exp: new Function("exp", 1, true),
   ln: new Function("ln", 1, true),
