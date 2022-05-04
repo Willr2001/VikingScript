@@ -88,9 +88,8 @@ class Context {
     this.analyze(s.test)
     this.newChildContext().analyze(s.consequent)
   }
-  WhileStatement(s) {
-    this.analyze(s.test)
-    this.analyze(s.body)
+  ReturnStatement(s) {
+    this.analyze(s.expression)
   }
   PrintStatement(s) {
     this.analyze(s.argument)

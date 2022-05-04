@@ -25,6 +25,7 @@ const semanticErrors = [
   ],
   ["too few arguments", "runes(sin())", /Expected 1 arg\(s\), found 0/],
   ["too many arguments", "runes(sin(5, 10))", /Expected 1 arg\(s\), found 2/],
+  //["return outside function", "hverfa 100", /Return outside function/],
 ]
 
 const source = `

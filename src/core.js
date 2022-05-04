@@ -45,12 +45,6 @@ export class ShortIfStatement {
   }
 }
 
-// export class WhileStatement {
-//   constructor(test, body) {
-//     Object.assign(this, { test, body })
-//   }
-// }
-
 export class ReturnStatement {
   constructor(expression) {
     Object.assign(this, { expression })
