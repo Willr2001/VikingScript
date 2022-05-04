@@ -1,1 +1,1 @@
-kalla x = 5 kalla y = 10 hverfa x greaterThan y
+kalla x = 1 lessThan (2 lessThanOrEqual (3 equal (4 doesNotEqual (5 greaterThanOrEqual (6 greaterThan 7)))))
