@@ -6,6 +6,8 @@ VikingScript {
             | print Exp                            -- print
             | IfStmt
             | return Exp                           -- return
+            | space
+
   Block     = "{" Statement* "}"
 
   IfStmt      = if Exp Block else (Block | IfStmt) -- long
