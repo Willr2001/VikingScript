@@ -3,6 +3,7 @@
 import * as core from "./core.js"
 
 export default function optimize(node) {
+  // console.log(node.constructor)
   return optimizers[node.constructor.name](node)
 }
 
@@ -14,18 +15,6 @@ const optimizers = {
   VariableDeclaration(d) {
     d.variable = optimize(d.variable)
     d.initializer = optimize(d.initializer)
-    return d
-  },
-  TypeDeclaration(d) {
-    d.type = optimize(d.type)
-    return d
-  },
-  Field(f) {
-    f.name = f.name.lexeme
-    return f
-  },
-  StructType(d) {
-    d.fields = optimize(d.fields)
     return d
   },
   FunctionDeclaration(d) {
@@ -44,12 +33,8 @@ const optimizers = {
     p.name = optimize(p.name)
     return p
   },
-  Increment(s) {
-    s.variable = optimize(s.variable)
-    return s
-  },
-  Decrement(s) {
-    s.variable = optimize(s.variable)
+  PrintStatement(s) {
+    s.argument = optimize(s.argument)
     return s
   },
   Assignment(s) {
@@ -58,9 +43,6 @@ const optimizers = {
     if (s.source === s.target) {
       return []
     }
-    return s
-  },
-  BreakStatement(s) {
     return s
   },
   ReturnStatement(s) {
@@ -86,57 +68,6 @@ const optimizers = {
       return s.test ? s.consequent : []
     }
     return s
-  },
-  WhileStatement(s) {
-    s.test = optimize(s.test)
-    if (s.test === false) {
-      // while false is a no-op
-      return []
-    }
-    s.body = optimize(s.body)
-    return s
-  },
-  RepeatStatement(s) {
-    s.count = optimize(s.count)
-    if (s.count === 0) {
-      // repeat 0 times is a no-op
-      return []
-    }
-    s.body = optimize(s.body)
-    return s
-  },
-  ForRangeStatement(s) {
-    s.iterator = optimize(s.iterator)
-    s.low = optimize(s.low)
-    s.op = optimize(s.op)
-    s.high = optimize(s.high)
-    s.body = optimize(s.body)
-    if (s.low.constructor === Number) {
-      if (s.high.constructor === Number) {
-        if (s.low > s.high) {
-          return []
-        }
-      }
-    }
-    return s
-  },
-  ForStatement(s) {
-    s.iterator = optimize(s.iterator)
-    s.collection = optimize(s.collection)
-    s.body = optimize(s.body)
-    if (s.collection.constructor === core.EmptyArray) {
-      return []
-    }
-    return s
-  },
-  Conditional(e) {
-    e.test = optimize(e.test)
-    e.consequent = optimize(e.consequent)
-    e.alternate = optimize(e.alternate)
-    if (e.test.constructor === Boolean) {
-      return e.test ? e.consequent : e.alternate
-    }
-    return e
   },
   BinaryExpression(e) {
     e.op = optimize(e.op)
@@ -170,7 +101,8 @@ const optimizers = {
         else if (e.op === ">") return e.left > e.right
       } else if (e.left === 0 && e.op === "+") return e.right
       else if (e.left === 1 && e.op === "*") return e.right
-      else if (e.left === 0 && e.op === "-") return new core.UnaryExpression("-", e.right)
+      else if (e.left === 0 && e.op === "-")
+        return new core.UnaryExpression("-", e.right)
       else if (e.left === 1 && e.op === "**") return 1
       else if (e.left === 0 && ["*", "/"].includes(e.op)) return 0
     } else if (e.right.constructor === Number) {
@@ -190,9 +122,6 @@ const optimizers = {
         return -e.operand
       }
     }
-    return e
-  },
-  EmptyOptional(e) {
     return e
   },
   SubscriptExpression(e) {

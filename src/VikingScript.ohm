@@ -19,7 +19,7 @@ VikingScript {
             | Exp2
   Exp2      = Exp2 "&&" Exp3                          -- binary
             | Exp3
-  Exp3      = Exp4 ("lessThanOrEqual"|"lessThan"|"equal"|"doesNotEqual"|"greaterThanOrEqual"|"greaterThan") Exp4 -- binary
+  Exp3      = Exp4 (le | lt | eq | ne | ge | gt) Exp4 -- binary
             | Exp4
   Exp4      = Exp4 ("+" | "-") Exp5                   -- binary
             | Exp5
@@ -55,7 +55,13 @@ VikingScript {
   if        = "ef" ~idchar
   else      = "kostr" ~idchar
   return    = "hverfa" ~idchar
-  keyword   = let | function | print | true | false
+  le        = "lessThanOrEqual" ~idchar
+  lt        = "lessThan" ~idchar
+  eq        = "equal" ~idchar
+  ne        = "doesNotEqual" ~idchar
+  ge        = "greaterThanOrEqual" ~idchar
+  gt        = "greaterThan" ~idchar
+  keyword   = let | function | print | true | false | if | else | return
   num       = digit+ ("." digit+)? 
   id        = ~keyword letter idchar*
   idchar    = letter | digit | "_"

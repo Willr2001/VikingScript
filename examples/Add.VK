@@ -2,6 +2,6 @@
 kalla x = 5
 kalla y = 17
 
-valhalla add(x, y) { 
+valhalla add(attack, slay) { 
   hverfa attack + slay 
 } 

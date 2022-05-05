@@ -1,0 +1,5 @@
+kalla x=sin(9.9)
+valhalla f(x) {
+    runes 3 * x
+    ef thor {runes 0 && (f(x) || 2)}
+}

@@ -16,6 +16,9 @@ class Context {
     this.parent = parent
     this.locals = new Map()
   }
+  newChildContext() {
+    return new Context(this)
+  }
   add(name, entity) {
     if (this.locals.has(name)) {
       error(`The identifier ${name} has already been declared`)
@@ -72,7 +75,6 @@ class Context {
   }
   IfStatement(s) {
     this.analyze(s.test)
-    checkBoolean(s.test)
     this.newChildContext().analyze(s.consequent)
     if (s.alternate.constructor === Array) {
       // It's a block of statements, make a new context
@@ -84,12 +86,10 @@ class Context {
   }
   ShortIfStatement(s) {
     this.analyze(s.test)
-    checkBoolean(s.test)
     this.newChildContext().analyze(s.consequent)
   }
-  WhileStatement(s) {
-    this.analyze(s.test)
-    this.analyze(s.body)
+  ReturnStatement(s) {
+    this.analyze(s.expression)
   }
   PrintStatement(s) {
     this.analyze(s.argument)
@@ -99,7 +99,10 @@ class Context {
     c.callee.value = this.get(c.callee, Function)
     const expectedParamCount = c.callee.value.paramCount
     if (c.args.length !== expectedParamCount) {
-      error(`Expected ${expectedParamCount} arg(s), found ${c.args.length}`, c.callee)
+      error(
+        `Expected ${expectedParamCount} arg(s), found ${c.args.length}`,
+        c.callee
+      )
     }
   }
   Conditional(c) {
@@ -124,7 +127,7 @@ class Context {
     if (t.category === "Bool") t.value = t.lexeme === "true"
   }
   Array(a) {
-    a.forEach(item => this.analyze(item))
+    a.forEach((item) => this.analyze(item))
   }
 }
 
