@@ -20,6 +20,8 @@ const syntaxChecks = [
   ["comments with no text are ok", "runes(1)>---->\nrunes(0)>---->"],
   ["non-Latin letters in identifiers", "コンパイラ = 100"],
   ["unicode escapes in strings", `runes "XY\\u{a1902b}"`],
+  ["if statement with parens", "ef (2 equal 1) {runes 0}"],
+  ["functions", "valhalla f(slay,attack,raid) {runes 0}"],
 ]
 
 const syntaxErrors = [
@@ -35,7 +37,11 @@ const syntaxErrors = [
   ["use kostr as a variable name", "kalla kostr = 1", /Line 1, col 7/],
   ["use kalla as a variable name", "kalla kalla = 1", /Line 1, col 7/],
   ["bad unicode escape", `runes "XY\\u{a1@W02b}"`, /Line 1, col 15/],
+  ["runes as variable name", "kalla runes = 5", /Line 1, col 7/],
+  ["declaration without assignment", "kalla x", /Line 1, col 8/],
+  ["if statement without block", "ef 2 equal 5", /Line 1, col 13/],
 ]
+
 
 describe("The grammar", () => {
   const grammar = ohm.grammar(fs.readFileSync("src/VikingScript.ohm"))
