@@ -22,6 +22,7 @@ const syntaxChecks = [
   ["unicode escapes in strings", `runes "XY\\u{a1902b}"`],
   ["if statement with parens", "ef (2 equal 1) {runes 0}"],
   ["functions", "valhalla f(slay,attack,raid) {runes 0}"],
+  ["functions with no params", "valhalla f() {runes 0}"],
 ]
 
 const syntaxErrors = [
@@ -40,6 +41,7 @@ const syntaxErrors = [
   ["runes as variable name", "kalla runes = 5", /Line 1, col 7/],
   ["declaration without assignment", "kalla x", /Line 1, col 8/],
   ["if statement without block", "ef 2 equal 5", /Line 1, col 13/],
+  ["no function name", "valhalla (slay,attack,raid) {runes 0}", /Line 1, col 10/],
 ]
 
 

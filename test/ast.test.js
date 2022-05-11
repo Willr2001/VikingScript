@@ -2,12 +2,12 @@ import assert from "assert/strict"
 import util from "util"
 import ast from "../src/ast.js"
 
-const source = `runes("Hello, world! 🌎")`
+const source = ` runes("Hello, world! 🌎")`
 
 const expected = `   1 | Program statements=[#2]
    2 | PrintStatement argument=(Str,""Hello, world! 🌎"")`
 
-const source1 = `kalla x = 5 kalla y = 10 hverfa x greaterThan y`
+const source1 = ` kalla x = 5 kalla y = 10 hverfa x greaterThan y`
 
 const expected1 = `   1 | Program statements=[#2,#3,#4]
    2 | VariableDeclaration variable=(Id,"x") initializer=(Num,"5")
@@ -19,9 +19,10 @@ const expected1 = `   1 | Program statements=[#2,#3,#4]
 
 // const expected2 = `  `
 
-// const source3 = ` }:| This is a comment in VikingScript!`
+ const source3 = `hverfa 5`
 
-// const expected3 = `  `
+ const expected3 = `   1 | Program statements=[#2]
+   2 | ReturnStatement expression=(Num,"5")`
 
 // const source4 = `  kalla x = 5 ef(x equal 5) { runes(x)  }`
 
@@ -32,7 +33,14 @@ const expected1 = `   1 | Program statements=[#2,#3,#4]
 // 5 | PrintStatement argument=(Id,"x") `
 
 describe("The AST generator", () => {
-  it("produces the expected AST for all node types", () => {
+  it("hello world", () => {
     assert.deepEqual(util.format(ast(source)), expected)
   })
+  it("program", () => {
+    assert.deepEqual(util.format(ast(source1)), expected1)
+  })
+  it("return", () => {
+    assert.deepEqual(util.format(ast(source3)), expected3)
+  })
 })
+

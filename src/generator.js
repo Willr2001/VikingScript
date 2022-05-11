@@ -83,12 +83,12 @@ export default function generate(program) {
     Function(f) {
       return targetName(f)
     },
-    Increment(s) {
-      output.push(`${gen(s.variable)}++;`)
-    },
-    Decrement(s) {
-      output.push(`${gen(s.variable)}--;`)
-    },
+    // Increment(s) {
+    //   output.push(`${gen(s.variable)}++;`)
+    // },
+    // Decrement(s) {
+    //   output.push(`${gen(s.variable)}--;`)
+    // },
     Assignment(s) {
       output.push(`${gen(s.target)} = ${gen(s.source)};`)
     },
@@ -131,24 +131,24 @@ export default function generate(program) {
       }
       return `${e.op}(${gen(e.operand)})`
     },
-    EmptyOptional(e) {
-      return "undefined"
-    },
-    SubscriptExpression(e) {
-      return `${gen(e.array)}[${gen(e.index)}]`
-    },
-    ArrayExpression(e) {
-      return `[${gen(e.elements).join(",")}]`
-    },
-    EmptyArray(e) {
-      return "[]"
-    },
-    MemberExpression(e) {
-      const object = gen(e.object)
-      const field = JSON.stringify(gen(e.field))
-      const chain = e.isOptional ? "?." : ""
-      return `(${object}${chain}[${field}])`
-    },
+    // EmptyOptional(e) {
+    //   return "undefined"
+    // },
+    // SubscriptExpression(e) {
+    //   return `${gen(e.array)}[${gen(e.index)}]`
+    // },
+    // ArrayExpression(e) {
+    //   return `[${gen(e.elements).join(",")}]`
+    // },
+    // EmptyArray(e) {
+    //   return "[]"
+    // },
+    // MemberExpression(e) {
+    //   const object = gen(e.object)
+    //   const field = JSON.stringify(gen(e.field))
+    //   const chain = e.isOptional ? "?." : ""
+    //   return `(${object}${chain}[${field}])`
+    // },
     Call(c) {
       // const targetCode = standardFunctions.has(c.callee)
       //   ? standardFunctions.get(c.callee)(gen(c.args))
@@ -164,9 +164,9 @@ export default function generate(program) {
     Number(e) {
       return e
     },
-    BigInt(e) {
-      return e
-    },
+    // BigInt(e) {
+    //   return e
+    // },
     Boolean(e) {
       return e
     },

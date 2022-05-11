@@ -7,6 +7,14 @@ const semanticChecks = [
   ["variables can be printed", "kalla x = 1 runes x"],
   ["variables can be reassigned", "kalla x = 1 x = x * 5 / ((-3) + x)"],
   ["all predefined identifiers", "runes sin(π)"],
+  ["return", "hverfa 5"],
+  ["||", "runes(thor||1 lessThan 2||loki||thor)"],
+  ["&&", "runes(thor&&1 lessThan 2&&loki&&thor)"],
+  ["arithmetic", "kalla x = 1 runes(2*3+5**3/2-5%8)"],
+  ["relations", 'runes(1 lessThanOrEqual 2 && "x" greaterThan "y" && 3.5 lessThan 1.2)'],
+  ["built-in constants", "runes(25.0 * π)"],
+  ["built-in sin", "runes(sin(π))"],
+
 ]
 
 const semanticErrors = [
@@ -25,6 +33,11 @@ const semanticErrors = [
   ],
   ["too few arguments", "runes(sin())", /Expected 1 arg\(s\), found 0/],
   ["too many arguments", "runes(sin(5, 10))", /Expected 1 arg\(s\), found 2/],
+  // [
+  //   "an attempt to create func with keyword",
+  //   "sin = 3",
+  //   /The identifier π is read only/,
+  // ],
   //["return outside function", "hverfa 100", /Return outside function/],
 ]
 
