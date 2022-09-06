@@ -1,87 +1,220 @@
-<h1> Viking Script! </h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
 
-<img src = "https://user-images.githubusercontent.com/54605290/151878597-51c37b27-4107-4398-b18a-7493c958f40e.PNG" alt = "logo" width = "400" height = "400" >
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="shortcut icon" type = "image/png" href="VikingScriptLogo.png" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
 
-<body>
-  
-  <p1><br><b>All programming languages shall be conquered!</b><br><br>
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <script src="script.js" defer></script>
+    <title>VikingScript</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="prism.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Blaka+Hollow&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-Welcome to the ambitious world of VikingScript. VikingScript is a Viking themed language which keeps the essence of many other high-level programming languages like JavaScript. Years of delicate syntax has turned us into barbaric hammer-swinging Vikings!
-
-    <br><br>by Will Ruskin, Zander Zemilak and Dylan McGoldrick 
-  </p1>
-  
-
-  
-  <p2> 
-    <br><br><h2> This is example code from our language:</h2>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <article class="wrapper" >
+    <div id="root"></div>
+    <ul class="tabs">
+      <li data-tab-target="#home" class="active tab">Home</li>
+      <li data-tab-target="#language" class="tab">Language</li>
+      <li data-tab-target="#about" class="tab">About</li>
+    </ul>
     
+    <div class="tab-content">
       
-    <b>This code is the classic first program:</b>
-    <br><br>runes("hello, world")
-  
- 
-    <br><br><b>This code is showing IF statements:</b>
-  
- <br><br>  kalla x = 5 
- <br>ef(x equal 5) { 
- <br>runes(x) 
- <br>}<br>
- kostr ef (x greaterThan 10) { 
- <br>runes("greater") 
- }
- kostr (x lessThan 10) { 
- <br>runes("less") 
- <br>}
+      <div id="home" data-tab-content class="active">
+        <h1>VikingScript</h1>
+        <img src="VikingScriptLogo.png" alt="VikingScript Logo" />
+        <h2>Introduction to VikingScript</h2>
+        <p>
+          All programming languages shall be conquered!
+          <br />
+          <br />Welcome to the ambitious world of VikingScript. VikingScript is
+          a Viking themed language which keeps the essence of many other
+          high-level programming languages like JavaScript. Years of delicate
+          syntax has turned us into barbaric hammer-swinging Vikings!
+        </p>
+      </div>
+      <div id="language" data-tab-content>
+        <h1>Language</h1>
+        <h2>Features</h2>
+        <ul>
+          <li>Weakly typed</li>
+          <li>Dynamically typed</li>
+          <li><code>.VK</code> file extension</li>
+        </ul>
+        <h2>Example Code</h2>
+        <p>
+          Below is the example code which you can see has a big viking
+          influence!
+        </p>
+        <h3>Print to the console</h3>
+        <p>
+          Classic hello, world program<br />
+          <code>runes</code> are the letters of an ancient Latin alphabet which
+          the Vikings used </p>
+          <table>
+            <tr>
+              <th>JavaScript</th>
+              <th>VikingScript</th>
+            </tr>
+            <tr>
+              <td><pre><code class="language-javascript">console.log("hello, world")</code></pre></td>
+              <td><pre><code>runes("hello, world")</code></pre></td>
+            </tr>
+          </table>
+        <h3>Variable declaration</h3>
+        <p>
+          <code>kalla</code> means declare in Norse<br />
+          No semi-colons<br />
+          No need to specify the type of the variable<br /></p>
+          <table>
+            <tr>
+              <th>JavaScript</th>
+              <th>VikingScript</th>
+            </tr>
+            <tr>
+              <td><pre><code class="language-javascript">let x = 5</code></pre></td>
+              <td><pre><code>kalla x = 5</code></pre></td>
+            </tr>
+          </table>
+        <h3>Return</h3>
+        <p><code>hverfa</code> identifier used, meaning "to return" in Norse</p>
+        <h3>Function declaration</h3>
+        <p>
+          <code>valhalla</code> being the majestic heaven in Asgard where all
+          Vikings strive to be<br />
+          No return type needed</p>
+          <table>
+              <tr>
+                <th>JavaScript</th>
+                <th>VikingScript</th>
+              </tr>
+              <tr>
+                <td><pre><code class="language-javascript">function add(x,y) 
+{ 
+  return x + y 
+} </code></pre></td>
+                <td><pre><code>valhalla add(x, y) 
+{ 
+  hverfa x + y 
+} </code></pre></td>
+              </tr>
+            </table>
+        
+
+        <h3>Comments</h3>
+        <p>The comment is based off a Viking helmet</p>
+        <table>
+            <tr>
+              <th>JavaScript</th>
+              <th>VikingScript</th>
+            </tr>
+            <tr>
+              <td><pre><code class="language-javascript">// 
+ Erik 
+// </code></pre></td>
+              <td><pre><code>{:| 
+ Gorm 
+}:| </code></pre></td>
+            </tr>
+          </table>
+        <h3>Relational Operators</h3>
+        <p>A barbaric syntax that even Vikings can understand<br />
+          <table>
+              <!-- <tr>
+                <th>VikingScript</th>
+              </tr> -->
+              <tr>
+                <td><code><pre>x equal y
+x lessThanOrEqual y
+x greaterThanOrEqual y
+x doesNotEqual y
+x greaterThan y
+x lessThan y
+                </pre></code></td>
+              </tr>
+            </table>
+        </p>
+        <h3>Conditionals</h3>
+        <p><code>ef</code> translates to <code>if </code>in Norse<br />
+          <code>kostr </code> the Norse word for "Otherwise" replaces <code>else </code></p>
+          <table>
+              <tr>
+                <th>JavaScript</th>
+                <th>VikingScript</th>
+              </tr>
+              <tr>
+                <td><pre><code class="language-javascript">let x = 5 
+if(x == 5) { 
+console.log(x) 
+}
+else if (x &gt 10) { 
+console.log("greater") 
+}
+else (x &lt 10) { 
+console.log("less") 
+}
+  </code></pre></td>
+<td><pre><code>kalla x = 5 
+ef(x equal 5) { 
+runes(x) 
+}
+kostr ef (x greaterThan 10) { 
+runes("greater") 
+}
+kostr (x lessThan 10) { 
+runes("less") 
+}</code></pre></td>
+              </tr>
+            </table>
+        <h3>True / False</h3>
+        <p>Replaced <code>true</code> and <code>false</code> values to please the Gods
+          <table><tr>
+              <th>JavaScript</th>
+              <th>VikingScript</th>
+            </tr><td><pre><code class="language-javascript">true
+false</code></pre></td>
+              <td><pre><code>thor 
+loki </code></pre></td> </table></p>
+      </div>
+      <div id="about" data-tab-content>
+        <h1>About</h1>
+        <p>by Will Ruskin, Zander Zemilak and Dylan McGoldrick</p>
+      </div>
+    </div>
+    <audio controls autoplay loop id="myaudio">
+        <source src = "viking.mp3" type = "audio/mpeg">
+    </audio>
     
-  </p2>
- 
- <p3>
-   <br><br><b>This code shows a Add function:</b>
-   <br><br>valhalla add(x, y) { 
-    <br>  hverfa x + y 
-    <br>} 
- </p3>
-  
-  
-<p4>
-  <br><br><b>These are the Relational Operators:</b>
-  <br> 
-  <br>x equal y
-  <br>x lessThanOrEqual y
-  <br>x greaterThanOrEqual y
-  <br>x doesNotEqual y
-  <br>x greaterThan y
-  <br>x lessThan y
-</p4>
-
-<p5>
-  <br><br><b>This is the Fibonacci sequence:</b>
-  <br><br>
-  runes(fib(10))
-
- <br>valhalla fib(num) {
- <br>ef(num isLessThan 2) {
- <br>hverfa num
- <br>} kostr {
- <br> hverfa fib(num - 1) + fib(num - 2)
- <br>}
- <br>}
-  </p5>
-  
-  
-  
-</body>
-
-<style>
-h1 {
-  text-align: center;
-}
-body {
-  font-family:Garamond
-
-}
-  
-
-
-</style>
+    <script src="prism.js"></script>
+    
+  </body>
+</html>
