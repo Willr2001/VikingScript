@@ -1,0 +1,117 @@
+.App {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  text-align: center;
+}
+h1 {
+  font-family: "Blaka Hollow", cursive;
+  background-color: white;
+  text-align: center;
+  font-size: 40px;
+  margin: 0px;
+  padding: 10px;
+}
+h2 {
+  font-family: "Apple Chancery", "Gabriola", serif;
+  text-align: center;
+  background-color: white;
+}
+h3 {
+  font-family: "Apple Chancery", "Gabriola", serif;
+  text-align: center;
+  background-color: white;
+}
+p {
+  font-family: "Apple Chancery", "MV Boli", serif;
+  text-align: center;
+  background-color: white;
+}
+code {
+  background-color: #eee;
+}
+ul {
+  font-family: "Apple Chancery", "MV Boli", serif;
+  text-align: center;
+  background-color: white;
+}
+[data-tab-content] {
+  display: none;
+}
+.active[data-tab-content] {
+  display: block;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: moccasin;
+  animation: scroll 120s linear infinite;
+  background: url("https://render.fineartamerica.com/images/rendered/default/greeting-card/images/artworkimages/medium/3/53-viking-pattern-warrior-valknut-norse-mythology-mister-tee-transparent.png?&targetx=-138&targety=-38&imagewidth=776&imageheight=776&modelwidth=500&modelheight=700&backgroundcolor=000000&orientation=1");
+  background-size: 35%;
+  /* background-repeat: repeat-y; */
+  background-position: center;
+  height: 850px;
+  min-width: auto;
+  width: auto;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+}
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid black;
+  font-family: "Blaka Hollow", cursive;
+  font-size: 25px;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px;
+}
+.tab.active {
+  background-color: #ccc;
+}
+.tab:hover {
+  background-color: #aaa;
+}
+.tab-content {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+}
+audio {
+  position: fixed;
+  bottom: 10px;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+}
+/* .wrapper {
+  animation: scroll 120s linear infinite;
+  background: url("https://render.fineartamerica.com/images/rendered/default/greeting-card/images/artworkimages/medium/3/53-viking-pattern-warrior-valknut-norse-mythology-mister-tee-transparent.png?&targetx=-138&targety=-38&imagewidth=776&imageheight=776&modelwidth=500&modelheight=700&backgroundcolor=000000&orientation=1");
+  background-size: 35%;
+  /* background-repeat: repeat-y; 
+  background-position: center;
+  height: auto;
+  min-width: auto;
+  width: auto;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+} */
+
+@keyframes scroll {
+  100% {
+    background-position: 0px -3000px;
+  }
+}
